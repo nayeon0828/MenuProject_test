@@ -86,13 +86,12 @@ public class MenuService {
     // 중복 찾는 list를 사용해서 바꾸기
     public int searchDuplicatMenuVO(String id) {
 
-        for(int i=0;i<list.size();i++) {
-            if(list.get(i).getId().equals(id))
+        for(int i=0; i<list.size(); i++) {
+            // 대소문자 무시하고 비교
+            if(list.get(i).getId().equalsIgnoreCase(id.trim()))
                 return i;
         }
         return -1;
-
-
     }
 
     /************메뉴 추가  추가 메서드**************/
