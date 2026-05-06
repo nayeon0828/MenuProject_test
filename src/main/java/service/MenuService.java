@@ -23,6 +23,12 @@ public class MenuService {
         return list;
     }
 
+    // 또는 생성자에서 초기화
+    private MenuService() {
+        list = new ArrayList<>();
+        LoadToCSV(); // 초기화 후 데이터를 읽어와야 합니다.
+    }
+
     //-------------시작전 파일 읽어들이기------------------
     private void LoadToCSV(){
 
@@ -72,6 +78,22 @@ public class MenuService {
 
     }
 
+    //메뉴 중복 확인 메서드 생성
+    /**
+     * @param id 검색할 학번
+     * @return 찾으면 배열 인덱스, 못 찾으면 -1
+     */
+    // 중복 찾는 list를 사용해서 바꾸기
+    public int searchDuplicatMenuVO(String id) {
+
+        for(int i=0;i<list.size();i++) {
+            if(list.get(i).getId().equals(id))
+                return i;
+        }
+        return -1;
+
+
+    }
 
     /************메뉴 추가  추가 메서드**************/
 
