@@ -23,7 +23,13 @@ public class HandlerMapping {
             case 1:
                 controller = new addMenuController();
                 break;
+            case 2:
+                controller = new deleteController();
+                break;
 
+            case 3:
+                controller = new updateController();
+                break;
 
             case  4:
                 controller = new printAllController();
