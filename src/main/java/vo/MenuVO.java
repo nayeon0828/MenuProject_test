@@ -22,6 +22,11 @@ public class MenuVO {
     private String category;
     private boolean isSell;
 
+    @Override
+    public String toString() {
+        return id+ "," + name + "," + price + "," + category + "," + isSell;
+    }
+
     //초기 생성자 선언
     public MenuVO(String id, String name, int price, String category, boolean isSell) {
         this.id = id;
@@ -29,6 +34,11 @@ public class MenuVO {
         this.price = price;
         this.category = category;
         this.isSell = isSell;
+    }
+
+    // MenuVO.java 파일 내부에 추가
+    public String getSellStatus() {
+        return isSell ? "판매중" : "품절";
     }
 
     //get & set  선언

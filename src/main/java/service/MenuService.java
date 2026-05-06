@@ -18,10 +18,7 @@ public class MenuService {
 
     //메뉴데이터로 list 선언
     private ArrayList<MenuVO> list;
-    //메뉴데이터 list 호출할 수 있는 유일 통로 생성
-    public ArrayList<MenuVO> getList(){
-        return list;
-    }
+
 
     // 또는 생성자에서 초기화
     private MenuService() {
@@ -102,6 +99,11 @@ public class MenuService {
     /************메뉴 삭제  추가 메서드**************/
     /************메뉴 수정  추가 메서드**************/
     /************메뉴 조회  추가 메서드**************/
+    //메뉴데이터 list 호출
+    public ArrayList<MenuVO> getList(){
+        return list;
+    }
+
 
 
 

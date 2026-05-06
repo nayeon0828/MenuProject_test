@@ -23,6 +23,11 @@ public class HandlerMapping {
             case 1:
                 controller = new addMenuController();
                 break;
+
+
+            case  4:
+                controller = new printAllController();
+                break;
         }
 
         return controller;
