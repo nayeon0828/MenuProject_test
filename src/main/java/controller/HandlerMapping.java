@@ -21,18 +21,18 @@ public class HandlerMapping {
 
         switch (no){
             case 1:
-                controller = new addMenuController();
+                controller = new AddMenuController();
                 break;
             case 2:
-                controller = new deleteController();
+                controller = new DeleteController();
                 break;
 
             case 3:
-                controller = new updateController();
+                controller = new UpdateController();
                 break;
 
             case  4:
-                controller = new printAllController();
+                controller = new PrintAllController();
                 break;
         }
 

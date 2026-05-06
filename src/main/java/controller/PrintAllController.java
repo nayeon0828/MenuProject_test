@@ -6,7 +6,7 @@ import vo.MenuVO;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class printAllController implements Controller {
+public class PrintAllController implements Controller {
     @Override
     public void execute(Scanner sc) {
         ArrayList<MenuVO> list = MenuService.getInstance().getList();

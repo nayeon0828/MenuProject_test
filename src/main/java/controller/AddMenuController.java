@@ -5,7 +5,7 @@ import vo.MenuVO;
 
 import java.util.Scanner;
 
-public class addMenuController implements Controller {
+public class AddMenuController implements Controller {
     @Override
     public void execute(Scanner sc) {
         System.out.println();
