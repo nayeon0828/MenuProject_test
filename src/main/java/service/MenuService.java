@@ -23,7 +23,7 @@ public class MenuService {
         return list;
     }
 
-    //시작전 파일 읽어들이기
+    //-------------시작전 파일 읽어들이기------------------
     private void LoadToCSV(){
 
         try(FileReader fr = new FileReader("menu.csv");
@@ -54,6 +54,34 @@ public class MenuService {
 
 
     }
+
+
+    //-------------종료 파일 내보내기------------------
+
+    private void  exportToCSV(){
+        try(FileWriter fw = new FileWriter("menu.csv");
+            PrintWriter pw = new PrintWriter(fw);
+        ){
+            //pw를 통해서 아이템들 작성해서 보내기
+            list.forEach(item -> pw.println(item));
+            System.out.println("메뉴 정보 저장 완료");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    /************메뉴 추가  추가 메서드**************/
+
+
+
+
+    /************메뉴 삭제  추가 메서드**************/
+    /************메뉴 수정  추가 메서드**************/
+    /************메뉴 조회  추가 메서드**************/
+
 
 
 
