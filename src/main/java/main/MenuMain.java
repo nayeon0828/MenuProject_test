@@ -21,6 +21,7 @@ public class MenuMain {
             System.out.print("사용자 입력 번호 : ");
             //사용자의 입력값
             int no = sc.nextInt();
+            sc.nextLine();
 
 
             Controller controller = HandlerMapping.getInstance().createController(no);

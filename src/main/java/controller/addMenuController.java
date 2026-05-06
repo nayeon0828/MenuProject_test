@@ -1,12 +1,14 @@
 package controller;
 
 import service.MenuService;
+import vo.MenuVO;
 
 import java.util.Scanner;
 
 public class addMenuController implements Controller {
     @Override
     public void execute(Scanner sc) {
+        System.out.println();
         System.out.println("메뉴 정보를 추가합니다.");
         System.out.print("등록 메뉴 번호 : ");
         String id = sc.nextLine();
@@ -32,6 +34,17 @@ public class addMenuController implements Controller {
         int sellInput = sc.nextInt();
         sc.nextLine(); // 버퍼 비우기
         boolean isSell = (sellInput == 1); // 1이면 true, 아니면 false
+
+        // 3. VO 객체 생성 및 서비스로 전달
+        boolean result = MenuService.getInstance()
+                .appendMenuVO(new MenuVO(id, name, price, category,isSell));
+
+        if(result) {
+            System.out.println("메뉴 정보 등록이 완료되었습니다.");
+        } else {
+            System.out.println("메뉴 정보 등록에 실패하였습니다.");
+        }
+
 
     }
 }

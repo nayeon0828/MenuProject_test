@@ -46,7 +46,7 @@ public class MenuService {
             }
 
             //파일 로드 완료
-            System.out.println("사원 정보 로드 완료");
+            System.out.println("메뉴 정보 로드 완료");
 
 
         } catch (FileNotFoundException e) {
@@ -93,7 +93,11 @@ public class MenuService {
 
     /************메뉴 추가  추가 메서드**************/
 
+    public boolean appendMenuVO(MenuVO vo) {
 
+        return list.add(vo);
+
+    }
 
 
     /************메뉴 삭제  추가 메서드**************/
