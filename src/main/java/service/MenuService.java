@@ -101,6 +101,27 @@ public class MenuService {
 
 
     /************메뉴 삭제  추가 메서드**************/
+
+
+    public boolean deleteMenutVO(String id) {
+
+        //삭제할 학생 정보가 있는지?
+        int i = MenuService.getInstance().searchDuplicatMenuVO(id);
+
+        // 삭제할 목록이 없으면 -1로 출력해서 false로 반환
+        if(i == -1) {
+            return false;
+        }
+
+        //list로해서 삭제하는 방법
+        // list안에 같은 메뉴번호를 찾은 다음에 -> remove로 해당 메뉴 idx삭제하기
+
+        return list.remove(i) != null;
+
+    }
+
+
+
     /************메뉴 수정  추가 메서드**************/
     /************메뉴 조회  추가 메서드**************/
     //메뉴데이터 list 호출
