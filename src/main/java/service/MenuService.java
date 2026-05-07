@@ -123,6 +123,14 @@ public class MenuService {
 
 
     /************메뉴 수정  추가 메서드**************/
+
+    public MenuVO searchForUpdateMenuVO(String id) {
+        int i = list.indexOf(new MenuVO(id, null, 0,null,false));
+        return list.get(i);
+    }
+
+
+
     /************메뉴 조회  추가 메서드**************/
     //메뉴데이터 list 호출
     public ArrayList<MenuVO> getList(){

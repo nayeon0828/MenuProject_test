@@ -41,6 +41,14 @@ public class MenuVO {
         return isSell ? "판매중" : "품절";
     }
 
+    //리스트 수정하는 매서드 (id를 제외한 나머지 값들 변경)
+    public void updateMenuVO(String name, int price ,String category, boolean isSell) {
+        this.name = name;
+        this.price = price;
+        this.category = category;
+        this.isSell = isSell;
+    }
+
     //get & set  선언
     public String getId() {
         return id;
