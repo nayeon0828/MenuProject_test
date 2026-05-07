@@ -61,7 +61,7 @@ public class MenuService {
 
     //-------------종료 파일 내보내기------------------
 
-    private void  exportToCSV(){
+    public void  exportToCSV(){
         try(FileWriter fw = new FileWriter("menu.csv");
             PrintWriter pw = new PrintWriter(fw);
         ){
